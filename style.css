@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    padding: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2563eb;
+}
+
+.summary {
+    text-align: center;
+    background: #2563eb;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.summary h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.summary p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    grid-column: span 2;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter select {
+    width: 200px;
+}
+
+.expense-list h2 {
+    margin-bottom: 15px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border-left: 5px solid #2563eb;
+    border-radius: 6px;
+}
+
+.expense-info h3 {
+    margin-bottom: 5px;
+}
+
+.expense-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    color: #dc2626;
+    margin-right: 15px;
+}
+
+.delete-btn {
+    background: #dc2626;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.empty {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: span 1;
+    }
+
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .expense-amount {
+        margin-right: 0;
+    }
+}
